@@ -19,7 +19,13 @@ export interface FetchDataResponse {
 }
 
 export interface SubmitResponse {
-  score: number;
+  score?: number;
+  validation?: {
+    score: number;
+    issues_found: number;
+    issues: any[];
+  };
   message: string;
+  success?: boolean;
   details?: any;
 }
